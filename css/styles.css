@@ -143,12 +143,14 @@ body {
     font-family: Inter;
     font-size: 18px;
     font-weight: 400;
+    color: var(--title-color) !important;
 }
 
 .header-menu-bottom-link-text {
     font-family: Inter;
     font-size: 18px;
     font-weight: 400;
+    text-align: end;
 }
 
 .header-menu-bottom-link {
@@ -743,6 +745,7 @@ body {
     -moz-appearance: none;
     -webkit-appearance: none;
     background: rgba(255, 244, 228, 1);
+    color: var(--black-text-color) !important;
     border: none;
     border-radius: 20px;
     padding: 20px;
@@ -803,10 +806,11 @@ body {
 }
 
 .footer-info-text {
+    text-decoration: none;
     font-family: Inter;
     font-size: 22px;
     font-weight: 300;
-    color: var(--text-color);
+    color: var(--text-color) !important;
 }
 
 .footer-link {
