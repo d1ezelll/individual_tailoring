@@ -693,7 +693,7 @@ body {
 .footer {
     background: var(--full-background-color);
     backdrop-filter: blur(83.69999694824219px);
-    width: 90vw;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -710,7 +710,7 @@ body {
 }
 
 .footer-container {
-    width: 1680px;
+    width: 90vw;
     display: flex;
     flex-direction: column;
     row-gap: 30px;
