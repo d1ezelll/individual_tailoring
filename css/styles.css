@@ -515,6 +515,11 @@ body {
     color: var(--text-color);
 }
 
+.services-grid-item-img {
+    max-width: 405px;
+    max-height: 600px;
+}
+
 #services-grid-item-img-tailoring {
     max-width: 405px;
     max-height: 600px;
@@ -688,7 +693,7 @@ body {
 .footer {
     background: var(--full-background-color);
     backdrop-filter: blur(83.69999694824219px);
-    width: 100%;
+    width: 90vw;
     overflow: hidden;
 }
 
