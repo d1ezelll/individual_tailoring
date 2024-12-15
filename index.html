@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Individual Tailoring</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/adaptation.css">
     <link rel="shortcut icon" href="./img/mini_svg/favicon.svg" type="image/x-icon">
     <script src="./js/main.js" defer></script>
 </head>
@@ -22,24 +23,67 @@
                         <li class="header-nav-link-text">Home</li>
                     </a>
 
-                    <a href="#" class="header-nav-link">
+                    <a href="#about-us" class="header-nav-link">
                         <li class="header-nav-link-text">About Us</li>
                     </a>
 
-                    <a href="#" class="header-nav-link">
+                    <a href="#services" class="header-nav-link">
                         <li class="header-nav-link-text">Services</li>
                     </a>
+
+                    <a href="#contacts" style="cursor: pointer; user-select: none;" class="header-contact-button-menu">Contact Us</a>
+
+                    <div id="header-menu-bottom" class="header-menu-bottom" style="display: none;">
+                        <div class="header-menu-bottom-info">
+                            <p class="header-menu-bottom-info-text">account@tirewelljs.info</p>
+                            <p class="header-menu-bottom-info-text">+1 8137268731</p>
+                        </div>
+    
+                        <div class="header-menu-bottom-link">
+                            <p class="header-menu-bottom-link-text">25 Lenin Street, apartment 7, Moscow, Russia, 119021</p>
+                            <div class="header-menu-bottom-link-buttons">
+        
+                                <div class="contacts-left-links-partners">
+                                    <a href="#" class="contacts-left-links-partners-mastercard">
+                                        <img src="./img/mini_svg/mastercard.svg" alt="" class="contacts-left-links-partners-mastercard-img">
+                                    </a>
+        
+                                    <a href="#" class="contacts-left-links-partners-visa">
+                                        <img src="./img/mini_svg/visa.svg" alt="" class="contacts-left-links-partners-visa-img">
+                                    </a>
+        
+                                    <a href="#" class="contacts-left-links-partners-amex">
+                                        <img src="./img/mini_svg/amex.svg" alt="" class="contacts-left-links-partners-amex-img">
+                                    </a>
+                                </div>
+    
+                                <div class="contacts-left-links-social">
+                                    <a href="#" class="contacts-left-links-social-facebook">
+                                        <img src="./img/mini_svg/facebook.svg" alt="" class="contacts-left-links-social-facebook-img">
+                                    </a>
+        
+                                    <a href="#" class="contacts-left-links-social-inst">
+                                        <img src="./img/mini_svg/instagram.svg" alt="" class="contacts-left-links-social-inst-img">
+                                    </a>
+        
+                                    <a href="#" class="contacts-left-links-social-telegram">
+                                        <img src="./img/mini_svg/telegram.svg" alt="" class="contacts-left-links-social-telegram-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </ul>
             </div>
 
             <div class="header-contact">
-                <a class="header-contact-button">Contact Us</a>
-                <button class="header-menu-button">Menu</button>
+                <a href="#contacts" style="cursor: pointer; user-select: none; text-decoration: none;" class="header-contact-button">Contact Us</a>
+                <button id="menuButton" class="header-menu-button">Menu</button>
             </div>
         </div>
     </header>
 
-    <main class="main">
+    <main id="main" class="main">
         <section class="intro">
             <div class="intro-container">
                 <h1 class="intro-title">Individual Tailoring</h1>
@@ -53,9 +97,9 @@
                         </p>
     
                         <div class="intro-miniform">
-                            <form action="" class="intro-form">
+                            <form id="introForm" action="" class="intro-form">
                                 <input type="text" class="intro-form-number" placeholder="Х (ХХХ) - (ХХХ) - ХХ - ХХ">
-                                <button class="intro-form-button">Contact Us</button>
+                                <button id="introFormButton" class="intro-form-button">Contact Us</button>
                             </form>
                         </div>
     
@@ -69,7 +113,7 @@
                                 <div class="intro-product-card-text">
                                     Our company specializes in sewing thermal bags that combine high quality materials and exceptional workmanship.
                                 </div>
-                                <a href="#" class="intro-product-card-link">Contact Us</a>
+                                <a href="#contacts" class="intro-product-card-link">Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -110,7 +154,7 @@
             </div>
         </section>
 
-        <section class="about-us">
+        <section id="about-us" class="about-us">
             <div class="about-us-container">
                 <div class="about-us-left">
                     <h1 class="about-us-title">About us</h1>
@@ -123,7 +167,7 @@
                         We are proud to use modern materials and advanced technologies to ensure that our products serve you long and efficiently. Our team of experienced professionals works closely with clients at every stage, from concept to final product, to ensure your complete satisfaction.
                     </p>
 
-                    <a href="#" class="about-us-contact">
+                    <a href="#contacts" class="about-us-contact">
                         <button class="about-us-contact-button">Contact Us</button>
                     </a>
                 </div>
@@ -135,7 +179,7 @@
             </div>
         </section>
 
-        <section class="services">
+        <section id="services" class="services">
             <div class="services-container">
                 <h1 class="services-title">Services</h1>
 
@@ -144,53 +188,50 @@
                     <div class="services-grid-item">
                         <img src="./img/services/services_first.svg" alt="" class="services-grid-item-img">
                         
-                        <div class="services-grid-item-title">Individual tailoring</div>
-                        <div class="services-grid-item-text">
+                        <p class="services-grid-item-title">Individual tailoring</p>
+                        <p class="services-grid-item-text">
                             Creating clothes according to the individual standards of the client, taking into account all the wishes regarding the style, fabrics and details.
-                        </div>
+                        </p>
                     </div>
 
                     <div class="services-grid-item">
                         <img src="./img/services/services_second.svg" alt="" class="services-grid-item-img">
                         
-                        <div class="services-grid-item-title">Individual tailoring</div>
-                        <div class="services-grid-item-text">
-                            Creating clothes according to the individual standards of the client, taking into account all the wishes regarding the style, fabrics and details.
-                        </div>
+                        <p class="services-grid-item-title">Atelier for modification and repair of clothing</p>
+                        <p class="services-grid-item-text">
+                            Making changes to existing clothes for a better fit, as well as repairs, including replacing zippers, hemming and restoring clothes.                        </p>
                     </div>
 
                     <div class="services-grid-item">
                         <img src="./img/services/services_third.svg" alt="" class="services-grid-item-img">
                         
-                        <div class="services-grid-item-title">Individual tailoring</div>
-                        <div class="services-grid-item-text">
-                            Creating clothes according to the individual standards of the client, taking into account all the wishes regarding the style, fabrics and details.
-                        </div>
+                        <p class="services-grid-item-title">Sewing of home textiles</p>
+                        <p class="services-grid-item-text">
+                            Custom-made bed linen, curtains, tablecloths and other textiles for the home, providing harmony and comfort in the interior.                        </p>
                     </div>
 
                     <div class="services-grid-item">
                         <img src="./img/services/services_fourth.svg" alt="" class="services-grid-item-img">
                         
-                        <div class="services-grid-item-title">Individual tailoring</div>
-                        <div class="services-grid-item-text">
-                            Creating clothes according to the individual standards of the client, taking into account all the wishes regarding the style, fabrics and details.
-                        </div>
+                        <p class="services-grid-item-title">Thermal Bags</p>
+                        <p class="services-grid-item-text">
+                            We manufacture insulated bags in a variety of sizes and designs to suit the needs of our customers, ensuring that food is maintained at the highest level of temperature and freshness.                        </p>
                     </div>
 
                     <div class="services-grid-item">
                         <img id="services-grid-item-img-tailoring" src="./img/services/tailoring.png" alt="" class="services-grid-item-img">
-                        
-                        <div class="services-grid-item-title">Individual tailoring</div>
-                        <div class="services-grid-item-text">
-                            Creating clothes according to the individual standards of the client, taking into account all the wishes regarding the style, fabrics and details.
-                        </div>
-                    </div>
+                        <img id="fat_picture_mobile" src="./img/services/fat_picture_mobile.svg" alt="" class="services-grid-item-img">
 
+                        <p class="services-grid-item-title">Tailoring of large sizes</p>
+                        <p class="services-grid-item-text">
+                            Designing and creating clothes for customers in need of non-standard sizes, taking into account comfort and style.                        </p>
+                    </div>
+                    
                 </div>
             </div>
         </section>
 
-        <section class="contacts">
+        <section id="contacts" class="contacts">
             <div class="contacts-container">
                 <div class="contacts-left">
                     <div class="contacts-left-content">
@@ -237,7 +278,7 @@
                 <div class="contacts-right">
                     <div class="contacts-right-content">
                         <h1 class="contacts-right-title">Please fill out this form<br>and we will contact you</h1>
-                        <form class="contacts-right-form">
+                        <form id="contacts-right-form" class="contacts-right-form">
                             <div class="contacts-right-form-input">
                                 <label for="contacts-right-form-name">Full Name</label>
                                 <input id="contacts-right-form-name" type="text" class="contacts-right-form-name" placeholder="Х (ХХХ) - (ХХХ) - ХХ - ХХ">
@@ -271,23 +312,22 @@
         
                     <div class="header-menu">
                         <ul class="header-nav">
-                            <a href="#" class="header-nav-link">
+                            <a href="#main" class="header-nav-link">
                                 <li class="header-nav-link-text">Home</li>
                             </a>
         
-                            <a href="#" class="header-nav-link">
+                            <a href="#about-us" class="header-nav-link">
                                 <li class="header-nav-link-text">About Us</li>
                             </a>
         
-                            <a href="#" class="header-nav-link">
+                            <a href="#services" class="header-nav-link">
                                 <li class="header-nav-link-text">Services</li>
                             </a>
                         </ul>
                     </div>
         
                     <div class="header-contact">
-                        <a class="header-contact-button">Contact Us</a>
-                        <button class="header-menu-button">Menu</button>
+                        <a href="#contacts" style="display: block;" class="header-contact-button">Contact Us</a>
                     </div>
                 </div>
 
