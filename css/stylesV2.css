@@ -546,7 +546,7 @@ body {
     color: var(--title-color);
 }
 
-.services-grid {
+.swiper-wrapper {
     display: flex;
     flex-wrap: nowrap;
     column-gap: 10px;

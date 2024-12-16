@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/stylesV2.css">
     <link rel="stylesheet" href="./css/adaptationV2.css">
     <link rel="shortcut icon" href="./img/mini_svg/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="./js/mainV2.js" defer></script>
 </head>
 <body>
@@ -183,52 +185,77 @@
             <div class="services-container">
                 <h1 class="services-title">Services</h1>
 
-                <div class="services-grid">
-
-                    <div class="services-grid-item">
-                        <img src="./img/services/services_first.svg" alt="" class="services-grid-item-img">
+                <div class="swiper-container services-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="services-grid-item">
+                                <img src="./img/services/services_first.svg" alt="" class="services-grid-item-img">
+                                
+                                <p class="services-grid-item-title">Individual tailoring</p>
+                                <p class="services-grid-item-text">
+                                    Creating clothes according to the individual standards of the client, taking into account all the wishes regarding the style, fabrics and details.
+                                </p>
+                            </div>
+                        </div>
+                       
+                        <div class="swiper-slide">
+                            <div class="services-grid-item">
+                                <img src="./img/services/services_second.svg" alt="" class="services-grid-item-img">
+                                
+                                <p class="services-grid-item-title">Atelier for modification and repair of clothing</p>
+                                <p class="services-grid-item-text">
+                                    Making changes to existing clothes for a better fit, as well as repairs, including replacing zippers, hemming and restoring clothes.                        </p>
+                            </div>
+                        </div>
                         
-                        <p class="services-grid-item-title">Individual tailoring</p>
-                        <p class="services-grid-item-text">
-                            Creating clothes according to the individual standards of the client, taking into account all the wishes regarding the style, fabrics and details.
-                        </p>
-                    </div>
-
-                    <div class="services-grid-item">
-                        <img src="./img/services/services_second.svg" alt="" class="services-grid-item-img">
+                        <div class="swiper-slide">
+                            <div class="services-grid-item">
+                                <img src="./img/services/services_third.svg" alt="" class="services-grid-item-img">
+                                
+                                <p class="services-grid-item-title">Sewing of home textiles</p>
+                                <p class="services-grid-item-text">
+                                    Custom-made bed linen, curtains, tablecloths and other textiles for the home, providing harmony and comfort in the interior.                        </p>
+                            </div>
+                        </div>
                         
-                        <p class="services-grid-item-title">Atelier for modification and repair of clothing</p>
-                        <p class="services-grid-item-text">
-                            Making changes to existing clothes for a better fit, as well as repairs, including replacing zippers, hemming and restoring clothes.                        </p>
+                        <div class="swiper-slide">
+                            <div class="services-grid-item">
+                                <img src="./img/services/services_fourth.svg" alt="" class="services-grid-item-img">
+                                
+                                <p class="services-grid-item-title">Thermal Bags</p>
+                                <p class="services-grid-item-text">
+                                    We manufacture insulated bags in a variety of sizes and designs to suit the needs of our customers, ensuring that food is maintained at the highest level of temperature and freshness.                        </p>
+                            </div>
+                        </div>
+                       
+                        <div class="swiper-slide">
+                            <div class="services-grid-item">
+                                <img id="services-grid-item-img-tailoring" src="./img/services/tailoring.svg" alt="" class="services-grid-item-img">
+                                <img id="fat_picture_mobile" src="./img/services/fat_picture_mobile.svg" alt="" class="services-grid-item-img">
+        
+                                <p class="services-grid-item-title">Tailoring of large sizes</p>
+                                <p class="services-grid-item-text">
+                                    Designing and creating clothes for customers in need of non-standard sizes, taking into account comfort and style.                        </p>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="services-grid-item">
-                        <img src="./img/services/services_third.svg" alt="" class="services-grid-item-img">
-                        
-                        <p class="services-grid-item-title">Sewing of home textiles</p>
-                        <p class="services-grid-item-text">
-                            Custom-made bed linen, curtains, tablecloths and other textiles for the home, providing harmony and comfort in the interior.                        </p>
-                    </div>
-
-                    <div class="services-grid-item">
-                        <img src="./img/services/services_fourth.svg" alt="" class="services-grid-item-img">
-                        
-                        <p class="services-grid-item-title">Thermal Bags</p>
-                        <p class="services-grid-item-text">
-                            We manufacture insulated bags in a variety of sizes and designs to suit the needs of our customers, ensuring that food is maintained at the highest level of temperature and freshness.                        </p>
-                    </div>
-
-                    <div class="services-grid-item">
-                        <img id="services-grid-item-img-tailoring" src="./img/services/tailoring.png" alt="" class="services-grid-item-img">
-                        <img id="fat_picture_mobile" src="./img/services/fat_picture_mobile.svg" alt="" class="services-grid-item-img">
-
-                        <p class="services-grid-item-title">Tailoring of large sizes</p>
-                        <p class="services-grid-item-text">
-                            Designing and creating clothes for customers in need of non-standard sizes, taking into account comfort and style.                        </p>
-                    </div>
-                    
+                </div>
                 </div>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const swiper = new Swiper('.services-swiper', {
+                        slidesPerView: 0,
+                        spaceBetween: 0,
+                        loop: false,
+                        observer: true,
+                        observeParents: true,
+                        watchSlidesProgress: true,
+                        watchSlidesVisibility: true
+                    });
+                });
+                </script>
         </section>
 
         <section id="contacts" class="contacts">
