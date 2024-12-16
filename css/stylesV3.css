@@ -85,6 +85,10 @@ body {
     text-decoration: none;
 }
 
+.header-nav-link:hover {
+    opacity: 0.7;
+}
+
 .header-nav-link-text {
     font-family: Inter;
     font-size: 18px;
@@ -107,6 +111,15 @@ body {
     appearance: none;
     text-decoration: none;
 }
+
+.header-contact-button:hover {
+    opacity: 0.7;
+}
+
+.header-menu-button:hover {
+    opacity: 0.7;
+}
+
 
 .header-menu-button {
     display: none;
@@ -291,6 +304,11 @@ body {
     white-space: nowrap;
 }
 
+.intro-form-button:hover {
+    opacity: 0.7;
+}
+
+
 .intro-product-card {
     display: flex;
     flex-direction: row;
@@ -437,6 +455,10 @@ body {
     border-radius: 120px;
 }
 
+.intro-right-description-bottom-button:hover {
+    opacity: 0.7;
+}
+
 /* Intro styles end */
 
 
@@ -498,6 +520,10 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+.about-us-contact-button:hover {
+    opacity: 0.7;
 }
 
 .about-us-right {
@@ -752,6 +778,10 @@ body {
     font-family: Inter;
     font-size: 18px;
     font-weight: 400;
+}
+
+.contacts-right-form-button:hover {
+    opacity: 0.7;
 }
 
 /* Contacts styles end */
