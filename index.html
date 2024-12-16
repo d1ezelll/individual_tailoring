@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Individual Tailoring</title>
-    <link rel="stylesheet" href="./css/stylesV2.css">
-    <link rel="stylesheet" href="./css/adaptationV2.css">
+    <link rel="stylesheet" href="./css/stylesV3.css">
+    <link rel="stylesheet" href="./css/adaptationV3.css">
     <link rel="shortcut icon" href="./img/mini_svg/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
@@ -228,8 +228,8 @@
                             </div>
                         </div>
                        
-                        <div class="swiper-slide">
-                            <div class="services-grid-item">
+                        <div id="service-grid-item-last" class="swiper-slide">
+                            <div id="service-grid-item-last-content" class="services-grid-item">
                                 <img id="services-grid-item-img-tailoring" src="./img/services/tailoring.svg" alt="" class="services-grid-item-img">
                                 <img id="fat_picture_mobile" src="./img/services/fat_picture_mobile.svg" alt="" class="services-grid-item-img">
         
@@ -245,14 +245,53 @@
             <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
-                    const swiper = new Swiper('.services-swiper', {
-                        slidesPerView: 0,
-                        spaceBetween: 0,
-                        loop: false,
-                        observer: true,
-                        observeParents: true,
-                        watchSlidesProgress: true,
-                        watchSlidesVisibility: true
+                    const swiperContainer = document.querySelector('.services-swiper');
+                
+                    function initSwiper() {
+                        if (!swiper || window.innerWidth >= 992) return;
+                
+                        swiper = new Swiper(swiperContainer, {
+                            slidesPerView: 'auto',
+                            spaceBetween: 30,
+                            loop: false,
+                            observer: true,
+                            observeParents: true,
+                            watchSlidesProgress: true,
+                            watchSlidesVisibility: true,
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev'
+                            },
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true
+                            },
+                            breakpoints: {
+                                1200: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 40
+                                },
+                                992: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 30
+                                }
+                            }
+                        });
+                    }
+                
+                    let swiper;
+                
+                    // Инициализация свайпера при загрузке страницы
+                    initSwiper();
+                
+                    // Обработчик изменения размера окна
+                    window.addEventListener('resize', () => {
+                        if (window.innerWidth < 772 && swiper) {
+                            swiper.destroy();
+                            swiper = null;
+                        } else if (window.innerWidth >= 992 && !swiper) {
+                            initSwiper();
+                        }
                     });
                 });
                 </script>
