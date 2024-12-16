@@ -248,35 +248,39 @@
                     const swiperContainer = document.querySelector('.services-swiper');
                 
                     function initSwiper() {
-                        if (!swiper || window.innerWidth >= 992) return;
+                        if (!window.innerWidth >= 992) return;
                 
-                        swiper = new Swiper(swiperContainer, {
-                            slidesPerView: 'auto',
-                            spaceBetween: 30,
-                            loop: false,
-                            observer: true,
-                            observeParents: true,
-                            watchSlidesProgress: true,
-                            watchSlidesVisibility: true,
-                            navigation: {
-                                nextEl: '.swiper-button-next',
-                                prevEl: '.swiper-button-prev'
-                            },
-                            pagination: {
-                                el: '.swiper-pagination',
-                                clickable: true
-                            },
-                            breakpoints: {
-                                1200: {
-                                    slidesPerView: 3,
-                                    spaceBetween: 40
+                        if (!swiper || !swiper.destroyed) {
+                            swiper = new Swiper(swiperContainer, {
+                                slidesPerView: 'auto',
+                                spaceBetween: 30,
+                                loop: false,
+                                observer: true,
+                                observeParents: true,
+                                watchSlidesProgress: true,
+                                watchSlidesVisibility: true,
+                                navigation: {
+                                    nextEl: '.swiper-button-next',
+                                    prevEl: '.swiper-button-prev'
                                 },
-                                992: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 30
+                                pagination: {
+                                    el: '.swiper-pagination',
+                                    clickable: true
+                                },
+                                breakpoints: {
+                                    1200: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 10
+                                    },
+                                    992: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 30
+                                    }
                                 }
-                            }
-                        });
+                            });
+                        } else {
+                            swiper.update();
+                        }
                     }
                 
                     let swiper;
@@ -286,7 +290,7 @@
                 
                     // Обработчик изменения размера окна
                     window.addEventListener('resize', () => {
-                        if (window.innerWidth < 772 && swiper) {
+                        if (window.innerWidth < 992 && swiper) {
                             swiper.destroy();
                             swiper = null;
                         } else if (window.innerWidth >= 992 && !swiper) {
