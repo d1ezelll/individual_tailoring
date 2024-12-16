@@ -259,14 +259,6 @@
                                 observeParents: true,
                                 watchSlidesProgress: true,
                                 watchSlidesVisibility: true,
-                                navigation: {
-                                    nextEl: '.swiper-button-next',
-                                    prevEl: '.swiper-button-prev'
-                                },
-                                pagination: {
-                                    el: '.swiper-pagination',
-                                    clickable: true
-                                },
                                 breakpoints: {
                                     1200: {
                                         slidesPerView: 3,
@@ -284,11 +276,9 @@
                     }
                 
                     let swiper;
-                
-                    // Инициализация свайпера при загрузке страницы
+                    
                     initSwiper();
-                
-                    // Обработчик изменения размера окна
+                    
                     window.addEventListener('resize', () => {
                         if (window.innerWidth < 992 && swiper) {
                             swiper.destroy();
